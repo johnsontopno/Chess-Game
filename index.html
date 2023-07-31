@@ -1,0 +1,201 @@
+<html>
+
+<head>
+  <title>Chess html css js</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="case">
+    <p class="headcell">Black Player</p>
+    <section class="line">
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+    </section>
+    <section class="line">
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+      <div class="pointW"></div>
+    </section>
+  </div>
+  <div class="plan">
+    <p class="headcell">Turn :</p>
+    <button class="btnR" onclick="replay()">Replay</button>
+    <section>
+      <div class="point" id='0'></div>
+      <div class="point black" id='1'></div>
+      <div class="point" id='2'></div>
+      <div class="point black" id='3'></div>
+      <div class="point" id='4'></div>
+      <div class="point black" id='5'></div>
+      <div class="point" id='6'></div>
+      <div class="point black" id='7'></div>
+    </section>
+    <section>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+    </section>
+    <section>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+    </section>
+    <section>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+    </section>
+    <section>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+    </section>
+    <section>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+    </section>
+    <section>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+    </section>
+    <section>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+      <div class="point black"></div>
+      <div class="point"></div>
+    </section>
+  </div>
+  <div class="case">
+    <p class="headcell">White Player</p>
+    <section class="line">
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+    </section>
+    <section class="line">
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+      <div class="pointB"></div>
+    </section>
+  </div>
+  <div class="play">
+    <div class='option'>
+      <h1>The Chess Game</h1>
+      <p>Chose the piece color : </p>
+      <div class="chose">
+        <div class='pointsOp'>
+          <img class='piece' src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png">
+        </div>
+        <div class='pointsOp'>
+          <img class='piece' src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png">
+        </div>
+      </div>
+      <p style="display: none">Please select before playing game</p>
+      <button class="btn">Play</button>
+    </div>
+  </div>
+  <div class="winner" style="display: none">
+    <p class="title">The Winner</p>
+    <p id='winnerPlayer'></p>
+    <button class="btn" onclick="replay()">Replay</button>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+
+  <script>
+    var ng;
+    var player = null;
+    var pointArr = [].slice.call(document.getElementsByClassName('pointsOp'));
+    pointArr.forEach(function(n) {
+      n.addEventListener('click', function() {
+        pointArr[0].classList.remove('me');
+        pointArr[1].classList.remove('me');
+        n.classList.add('me');
+      })
+    })
+    document.getElementsByClassName('btn')[0].addEventListener('click', function() {
+      if (pointArr[0].classList.contains('me')) {
+        player = 'W';
+        document.getElementsByClassName('play')[0].style.display = 'none';
+        document.getElementsByClassName('headcell')[1].innerText = 'Tourn : White';
+        document.getElementsByClassName('plan')[0].style.pointerEvents = 'all';
+        pointArr[0].classList.remove('me');
+        pointArr[1].classList.remove('me');
+        init();
+      } else if (pointArr[1].classList.contains('me')) {
+        player = 'B';
+        document.getElementsByClassName('play')[0].style.display = 'none';
+        document.getElementsByClassName('headcell')[1].innerText = 'Tourn : Black';
+        document.getElementsByClassName('plan')[0].style.pointerEvents = 'all';
+        pointArr[0].classList.remove('me');
+        pointArr[1].classList.remove('me');
+        init();
+      } else
+        document.getElementsByTagName('p')[4].style.display = 'block';
+    })
+
+    function replay() {
+      document.getElementsByClassName('play')[0].style.display = 'block';
+      document.getElementsByClassName('winner')[0].style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

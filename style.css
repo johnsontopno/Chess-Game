@@ -1,0 +1,135 @@
+.plan {
+    border: 1px solid gray;
+    width: 560px;
+    height: 615px;
+    display: inline-block;
+    margin-left: 4px;
+    background-color: #9db79d;
+    color: #442f2f;
+    /*padding-left: 4px;
+      padding-top: 4px;*/
+  }
+  .headcell {
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+    font-family: cursive;
+  }
+  .line {
+    display: table-cell;
+  }
+  .point {
+    width: 70px;
+    height: 70px;
+    display: table-cell;
+    background-color: #dcbda9;
+    /*display: inline-block;
+      margin-left: -4px;
+      margin-top: -4px;*/
+  }
+  .piece {
+    width: 66px;
+    pointer-events: none;
+    margin-left: 2px;
+  }
+  .black {
+    background-color: #b87956;
+  }
+  .case {
+    display: inline-block;
+    border: 1px solid gray;
+    background-color: #9db79d;
+    color: #442f2f;
+  }
+  .pointW,
+  .pointB {
+    width: 70px;
+    height: 70px;
+    background-color: #cac4c1;
+    display: table-caption;
+  }
+  .select {
+    outline: 2px solid #3a3a4c;
+  }
+  .kill {
+    outline: 2px solid #791b1b;
+  }
+  .me {
+    outline: 2px solid #204220;
+  }
+  .play {
+    width: 856px;
+    height: 615px;
+    border: 1px solid black;
+    margin-top: -617px;
+    position: absolute;
+    background-color: #72c175;
+  }
+  .option {
+    margin-left: 320px;
+    margin-top: 129px;
+  }
+  .option h1 {
+    color: #dc4e4e;
+    font-family: cursive;
+  }
+  .option p {
+    text-align: center;
+    width: 255px;
+    color: brown;
+    font-family: cursive;
+  }
+  .chose {
+    margin-left: 57px;
+  }
+  .pointsOp {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+  }
+  .btn {
+    border: 1px solid white;
+    margin-left: 68px;
+    margin-top: 18px;
+    width: 100px;
+    height: 26px;
+    color: #48486b;
+    font-family: cursive;
+  }
+  .btn:hover,
+  .btnR:hover {
+    color: blue;
+    cursor: pointer;
+  }
+  .winner {
+    position: absolute;
+    margin-top: -356px;
+    margin-left: 314px;
+    background-color: #4d5898;
+    width: 235px;
+    height: 160px;
+    border: 1px solid;
+  }
+  .winner p {
+    text-align: center;
+    font-family: cursive;
+  }
+  .title {
+    text-align: center;
+    color: yellowgreen;
+    margin-bottom: 3px;
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .btnR {
+    border: 1px solid white;
+    margin-top: -39px;
+    margin-left: 465px;
+    width: 88px;
+    height: 25px;
+    color: #48486b;
+    font-family: cursive;
+    position: absolute;
+  }
+  

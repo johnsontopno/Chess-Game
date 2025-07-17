@@ -1,3 +1,4 @@
 # Chess-Game
 Chess-Game
-![image](https://github.com/johnsontopno/Chess-Game/assets/66691981/73bef8e5-a13b-49fe-bf2e-13dd07eb2f08)
+
+<img width="2156" height="780" alt="Chess-Game" src="https://github.com/user-attachments/assets/0c7eacbc-938f-40f8-873e-4d218beb4949" />

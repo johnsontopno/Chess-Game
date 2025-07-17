@@ -1,199 +1,216 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Chess html css js</title>
-  <link type="text/css" rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chess Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="case">
-    <p class="headcell">Black Player</p>
-    <section class="line">
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-    </section>
-    <section class="line">
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-      <div class="pointW"></div>
-    </section>
-  </div>
-  <div class="plan">
-    <p class="headcell">Turn :</p>
-    <button class="btnR" onclick="replay()">Replay</button>
-    <section>
-      <div class="point" id='0'></div>
-      <div class="point black" id='1'></div>
-      <div class="point" id='2'></div>
-      <div class="point black" id='3'></div>
-      <div class="point" id='4'></div>
-      <div class="point black" id='5'></div>
-      <div class="point" id='6'></div>
-      <div class="point black" id='7'></div>
-    </section>
-    <section>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-    </section>
-    <section>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-    </section>
-    <section>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-    </section>
-    <section>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-    </section>
-    <section>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-    </section>
-    <section>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-    </section>
-    <section>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-      <div class="point black"></div>
-      <div class="point"></div>
-    </section>
-  </div>
-  <div class="case">
-    <p class="headcell">White Player</p>
-    <section class="line">
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-    </section>
-    <section class="line">
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-      <div class="pointB"></div>
-    </section>
-  </div>
-  <div class="play">
-    <div class='option'>
-      <h1>The Chess Game</h1>
-      <p>Chose the piece color : </p>
-      <div class="chose">
-        <div class='pointsOp'>
-          <img class='piece' src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png">
-        </div>
-        <div class='pointsOp'>
-          <img class='piece' src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png">
-        </div>
-      </div>
-      <p style="display: none">Please select before playing game</p>
-      <button class="btn">Play</button>
+  <main class="chess-container">
+    <!-- Black Player Panel -->
+    <div class="case">
+      <p class="headcell">Black Player</p>
+      <section class="line">
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+      </section>
+      <section class="line">
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+        <div class="pointW"></div>
+      </section>
     </div>
-  </div>
-  <div class="winner" style="display: none">
-    <p class="title">The Winner</p>
-    <p id='winnerPlayer'></p>
-    <button class="btn" onclick="replay()">Replay</button>
-  </div>
-  <script type="text/javascript" src="script.js"></script>
 
+    <!-- Game Board -->
+    <div class="plan">
+      <p class="headcell">Turn:</p>
+      <button class="btnR" onclick="replay()">Replay</button>
+      <!-- Board Sections -->
+      <section>
+        <div class="point" id="0"></div>
+        <div class="point black" id="1"></div>
+        <div class="point" id="2"></div>
+        <div class="point black" id="3"></div>
+        <div class="point" id="4"></div>
+        <div class="point black" id="5"></div>
+        <div class="point" id="6"></div>
+        <div class="point black" id="7"></div>
+      </section>
+      <section>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+      </section>
+      <section>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+      </section>
+      <section>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+      </section>
+      <section>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+      </section>
+      <section>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+      </section>
+      <section>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+      </section>
+      <section>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+        <div class="point black"></div>
+        <div class="point"></div>
+      </section>
+    </div>
+
+    <!-- White Player Panel -->
+    <div class="case">
+      <p class="headcell">White Player</p>
+      <section class="line">
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+      </section>
+      <section class="line">
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+        <div class="pointB"></div>
+      </section>
+    </div>
+
+    <!-- Game Start Popup -->
+    <div class="play">
+      <div class="option">
+        <h1>The Chess Game</h1>
+        <p>Choose your piece color:</p>
+        <div class="chose">
+          <div class="pointsOp">
+            <img class="piece" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt="White Pawn" />
+          </div>
+          <div class="pointsOp">
+            <img class="piece" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt="Black Pawn" />
+          </div>
+        </div>
+        <p class="warning" style="display: none;">Please select a color before playing.</p>
+        <button class="btn">Play</button>
+      </div>
+    </div>
+
+    <!-- Winner Popup -->
+    <div class="winner" style="display: none;">
+      <p class="title">The Winner</p>
+      <p id="winnerPlayer"></p>
+      <button class="btn" onclick="replay()">Replay</button>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
   <script>
-    var ng;
-    var player = null;
-    var pointArr = [].slice.call(document.getElementsByClassName('pointsOp'));
-    pointArr.forEach(function(n) {
-      n.addEventListener('click', function() {
-        pointArr[0].classList.remove('me');
-        pointArr[1].classList.remove('me');
-        n.classList.add('me');
-      })
-    })
-    document.getElementsByClassName('btn')[0].addEventListener('click', function() {
+    let player = null;
+    const pointArr = Array.from(document.getElementsByClassName('pointsOp'));
+    const playPanel = document.querySelector('.play');
+    const winnerPanel = document.querySelector('.winner');
+    const warningText = document.querySelector('.warning');
+
+    pointArr.forEach(el => {
+      el.addEventListener('click', () => {
+        pointArr.forEach(p => p.classList.remove('me'));
+        el.classList.add('me');
+        warningText.style.display = 'none';
+      });
+    });
+
+    document.querySelector('.btn').addEventListener('click', () => {
       if (pointArr[0].classList.contains('me')) {
         player = 'W';
-        document.getElementsByClassName('play')[0].style.display = 'none';
-        document.getElementsByClassName('headcell')[1].innerText = 'Tourn : White';
-        document.getElementsByClassName('plan')[0].style.pointerEvents = 'all';
-        pointArr[0].classList.remove('me');
-        pointArr[1].classList.remove('me');
-        init();
+        document.querySelectorAll('.headcell')[1].innerText = 'Turn: White';
       } else if (pointArr[1].classList.contains('me')) {
         player = 'B';
-        document.getElementsByClassName('play')[0].style.display = 'none';
-        document.getElementsByClassName('headcell')[1].innerText = 'Tourn : Black';
-        document.getElementsByClassName('plan')[0].style.pointerEvents = 'all';
-        pointArr[0].classList.remove('me');
-        pointArr[1].classList.remove('me');
-        init();
-      } else
-        document.getElementsByTagName('p')[4].style.display = 'block';
-    })
+        document.querySelectorAll('.headcell')[1].innerText = 'Turn: Black';
+      } else {
+        warningText.style.display = 'block';
+        return;
+      }
+
+      playPanel.style.display = 'none';
+      document.querySelector('.plan').style.pointerEvents = 'all';
+      pointArr.forEach(p => p.classList.remove('me'));
+      init(); // Start game logic
+    });
 
     function replay() {
-      document.getElementsByClassName('play')[0].style.display = 'block';
-      document.getElementsByClassName('winner')[0].style.display = 'none';
+      playPanel.style.display = 'block';
+      winnerPanel.style.display = 'none';
     }
   </script>
 </body>
